@@ -16,8 +16,8 @@ public class OrderCreatedHandler {
 
     @KafkaListener(
             id = "orderConsumerClient",
-            topics = "order.created",
-            groupId = "dispatch.order.created.consumer",
+            topics = "shochat.topic",
+            groupId = "dispatch.shochat.topic.consumer",
             containerFactory = "kafkaListenerContainerFactory"
     )
     public void listen(OrderCreated payload) {
